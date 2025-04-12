@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Venice Blvd";
+    src: url("../fonts/VeniceBlvd-Bold.otf") format("opentype");
+}
+
+body {
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-beetwen;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+    height: 100%;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 300;
+}
+
+
+.text--title {
+    font-size: 128px;
+}
+
+.text--subtitle {
+    font-size: 105px;
+}
+
+.text--p{
+    font-size: 55px;
+}
+
+.button {
+    background-color: #e0e5ec;
+    color: black;
+    border: none;
+    padding: 20px 40px;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+article {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.easter-egg {
+    font-size: 1px;
+}
