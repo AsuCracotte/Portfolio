@@ -85,8 +85,6 @@ article {
 }
 
 @keyframes spawn {
-    0%   {bottom:-10rem;}
-    50%  {top:12rem;}
-    75%  {bottom:-1.5rem;}
-    100% {top:0.5rem;}
+    0% {bottom: -5rem;}
+    100% {top: 5rem;}
 }
