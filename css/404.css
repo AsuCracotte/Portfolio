@@ -84,7 +84,4 @@ article {
     background-color: #6e0dff;
 }
 
-@keyframes spawn {
-    0% {bottom: -5rem;}
-    100% {top: 5rem;}
-}
+*/TODO: Add an hover effect to the button & a spawning animation/*
