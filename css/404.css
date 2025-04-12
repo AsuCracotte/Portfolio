@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Venice Blvd";
     src: url("../fonts/VeniceBlvd-Bold.otf") format("opentype");
+    src: url("../fonts/VeniceBlvd-SemiBold.otf") format("opentype");
 }
 
 body {
@@ -8,6 +9,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: black;
     height: 100vh;
     backdrop-filter: blur(20px);
     display: flex;
@@ -31,23 +33,24 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
     font-weight: 300;
 }
 
 
 .text--title {
     font-size: 128px;
-    font-style: bold;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .text--subtitle {
     font-size: 105px;
+    margin-bottom: 3rem
 }
 
 .text--p{
     font-size: 55px;
-    font-style: bold;
+    font-weight: bold;
 }
 
 .button {
@@ -62,13 +65,15 @@ main {
     position: relative;
     text-align: center;
     justify-content: center;
+    animation-name: spawn;
+    animation-duration: 4s;
+    animation-direction: normal;
 }
 
 article {
     text-align: center;
     display: flex;
     justify-content: center;
-    gap: 1rem;
 }
 
 .easter-egg {
@@ -77,4 +82,11 @@ article {
 
 ::selection {
     background-color: #6e0dff;
+}
+
+@keyframes spawn {
+    0%   {bottom:-10rem;}
+    50%  {top:12rem;}
+    75%  {bottom:-1.5rem;}
+    100% {top:0.5rem;}
 }
