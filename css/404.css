@@ -65,6 +65,7 @@ main {
     position: relative;
     text-align: center;
     justify-content: center;
+    display: inline-block;
 }
 
 article {
@@ -81,4 +82,4 @@ article {
     background-color: #6e0dff;
 }
 
-*/TODO: Add an hover effect to the button & a spawning animation/*
+*/TODO: Add an hover effect to the button/*
