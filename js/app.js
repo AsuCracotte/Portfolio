@@ -22,34 +22,29 @@ document.addEventListener("DOMContentLoaded", () => {
         if (progress >= 100) {
             clearInterval(interval);
 
-            loadingLogo.classList.add("zoom-effect");
-
             loadingScreen.style.transition = "opacity 0.8s ease";
             loadingScreen.style.opacity = "0";
 
             setTimeout(() => {
                 loadingScreen.style.display = "none";
-                loadingLogo.classList.remove("zoom-effect");
             }, 2000);
         }
     }, 50);
 
-    if (headerContent) {
-        headerContent.addEventListener("mousemove", (e) => {
-            const { offsetX, offsetY, target } = e;
-            const { clientWidth, clientHeight } = target;
+    headerContent.addEventListener("mousemove", (e) => {
+        const { offsetX, offsetY, target } = e;
+        const { clientWidth, clientHeight } = target;
 
-            const xPos = (offsetX / clientWidth) - 0.5;
-            const yPos = (offsetY / clientHeight) - 0.5;
+        const xPos = (offsetX / clientWidth) - 0.5;
+        const yPos = (offsetY / clientHeight) - 0.5;
 
-            const rotateX = yPos * -25;
-            const rotateY = xPos * 25;
+        const rotateX = yPos * -25;
+        const rotateY = xPos * 25;
 
-            headerContent.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
+        headerContent.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
 
-        headerContent.addEventListener("mouseleave", () => {
-            headerContent.style.transform = "rotateX(0) rotateY(0)";
-        });
-    }
+    headerContent.addEventListener("mouseleave", () => {
+        headerContent.style.transform = "rotateX(0) rotateY(0)";
+    });
 });
