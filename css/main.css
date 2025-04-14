@@ -9,6 +9,64 @@ body {
     height: 100vh;
 }
 
+#loading-logo {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.1s ease;
+}
+
+#loading-logo.zoom-effect {
+    transition: transform 0.8s ease;
+    transform: scale(5);
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #19191f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+#loading-percentage {
+    position: absolute;
+    bottom: 25%;
+    color: white;
+    font-size: 28px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+#loading-bar-container {
+    position: absolute;
+    bottom: 20%;
+    width: 60%;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#loading-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #6e0dff;
+    border-radius: 5px;
+    transition: width 0.1s ease;
+}
+
 .header-text {
     text-align: center;
     font-family: "Inter";
