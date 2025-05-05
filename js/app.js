@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         loadingPercentage.textContent = "100%";
         loadingBar.style.width = "100%";
 
-        // Transition de disparition
-        loadingLogo.classList.add("zoom-effect");
         loadingScreen.style.transition = "opacity 0.8s ease";
         loadingScreen.style.opacity = "0";
 
