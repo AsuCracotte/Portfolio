@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const loadingPercentage = document.getElementById("loading-percentage");
     const loadingBar = document.getElementById("loading-bar");
 
+    // Animation du logo au mouvement de la souris
     document.addEventListener("mousemove", (e) => {
         const { clientX, clientY } = e;
         const xOffset = (clientX / window.innerWidth - 0.5) * 50;
@@ -14,26 +15,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let progress = 0;
+
+    // Simule une progression jusqu'à 90%
     const interval = setInterval(() => {
-        progress += 1;
-        loadingPercentage.textContent = `${progress}%`;
-        loadingBar.style.width = `${progress}%`;
-
-        if (progress >= 100) {
-            clearInterval(interval);
-
-            loadingLogo.classList.add("zoom-effect");
-
-            loadingScreen.style.transition = "opacity 0.8s ease";
-            loadingScreen.style.opacity = "0";
-
-            setTimeout(() => {
-                loadingScreen.style.display = "none";
-                loadingLogo.classList.remove("zoom-effect");
-            }, 2000);
+        if (progress < 90) {
+            progress += Math.random() * 10;
+            loadingPercentage.textContent = `${Math.floor(progress)}%`;
+            loadingBar.style.width = `${Math.floor(progress)}%`;
         }
-    }, 50);
+    }, 100);
 
+    // Une fois que toutes les ressources sont chargées
+    window.addEventListener("load", () => {
+        clearInterval(interval);
+        progress = 100;
+        loadingPercentage.textContent = "100%";
+        loadingBar.style.width = "100%";
+
+        // Transition de disparition
+        loadingLogo.classList.add("zoom-effect");
+        loadingScreen.style.transition = "opacity 0.8s ease";
+        loadingScreen.style.opacity = "0";
+
+        setTimeout(() => {
+            loadingScreen.style.display = "none";
+            loadingLogo.classList.remove("zoom-effect");
+        }, 800);
+    });
+
+    // Effet de rotation sur le header
     if (headerContent) {
         headerContent.addEventListener("mousemove", (e) => {
             const { offsetX, offsetY, target } = e;
