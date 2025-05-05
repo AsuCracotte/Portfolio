@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const loadingPercentage = document.getElementById("loading-percentage");
     const loadingBar = document.getElementById("loading-bar");
 
-    // Animation du logo au mouvement de la souris
     document.addEventListener("mousemove", (e) => {
         const { clientX, clientY } = e;
         const xOffset = (clientX / window.innerWidth - 0.5) * 50;
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let progress = 0;
 
-    // Simule une progression jusqu'à 90%
     const interval = setInterval(() => {
         if (progress < 90) {
             progress += Math.random() * 10;
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 100);
 
-    // Une fois que toutes les ressources sont chargées
     window.addEventListener("load", () => {
         clearInterval(interval);
         progress = 100;
@@ -43,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 800);
     });
 
-    // Effet de rotation sur le header
     if (headerContent) {
         headerContent.addEventListener("mousemove", (e) => {
             const { offsetX, offsetY, target } = e;
