@@ -36,6 +36,14 @@ main {
     font-weight: 300;
 }
 
+.container--title,
+.container--entreprise {
+    display: none;
+}
+
+.show {
+    display: block;
+}
 
 .text--title {
     font-size: 128px;

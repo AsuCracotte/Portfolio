@@ -4,6 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const loadingLogo = document.getElementById("loading-logo");
     const loadingPercentage = document.getElementById("loading-percentage");
     const loadingBar = document.getElementById("loading-bar");
+    const hostname = window.location.hostname;
+
+    const containerEntreprise = document.querySelector(".container--entreprise");
+    const containerTitle = document.querySelector(".container--title");
+
+    containerEntreprise.classList.remove("show");
+    containerTitle.classList.remove("show");
+
+    if (hostname === "portfolio.cracotte.dev") {
+        containerEntreprise.classList.add("show");
+    } else if (hostname === "cracotte.dev" || hostname === "localhost" || hostname === "127.0.0.1") {
+        containerTitle.classList.add("show");
+    } else {
+        containerTitle.classList.add("show");
+    }
 
     document.addEventListener("mousemove", (e) => {
         const { clientX, clientY } = e;
