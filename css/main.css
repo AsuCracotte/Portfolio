@@ -9,6 +9,11 @@ body {
     height: 100vh;
 }
 
+::selection {
+    background-color: #6e0dff;
+    color: black;
+}
+
 #loading-logo {
     width: 150px;
     height: 150px;
@@ -131,9 +136,4 @@ body {
     align-items: center;
     position: relative;
     top: -2.7rem
-}
-
-::selection {
-    background-color: #6e0dff;
-    color: black;
 }
